@@ -1,4 +1,3 @@
-require 'bootstrap-sass'
 require 'compass/import-once/activate'
 require 'compass-normalize'
 # Require any additional compass plugins here.
