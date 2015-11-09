@@ -8,7 +8,6 @@ var gulp = require('gulp'),
     sass = require('gulp-ruby-sass'),
     autoprefixer = require('gulp-autoprefixer'),
     minifycss = require('gulp-minify-css'),
-    jshint = require('gulp-jshint'),
     uglify = require('gulp-uglify'),
     imagemin = require('gulp-imagemin'),
     rename = require('gulp-rename'),
@@ -22,55 +21,52 @@ var gulp = require('gulp'),
 gulp.task('sass', function () {
   return sass('sass/*.scss')
     .on('error', sass.logError)
-    .pipe(gulp.dest('public/css'));
+    .pipe(gulp.dest('css'));
 });
 
 // html
 gulp.task('html', function() {
   gulp.src('index.html')
     .pipe(htmlreplace({
-        'css':['css/materialize.css', 'css/materialize.min.css'],
-        //'js': ['lib/jquery/jquery.min.js', 'lib/bootstrap/js/bootstrap.min.js', 'lib/chart.js/Chart.min.js', 'lib/vue/vue.min.js','js/bundle.min.js']
+        'css':['css/materialize.min.css', 'css/portfolio.min.css'],
+        'js': ['js/jquery-2.1.1.js', 'js/materialize.min.js', 'js/portfolio.js']
     }))
     .pipe(gulp.dest('public/'));
+});
+
+// css
+gulp.task('css', function() {
+  return gulp.src('css/*.css')
+    .pipe(rename({ suffix: '.min' }))
+//    .pipe(minifycss())
+    .pipe(gulp.dest('public/css/'))
 });
 
 // js
 gulp.task('js', function() {
   return gulp.src('js/*.js')
-    .pipe(jshint('.jshintrc'))
-    .pipe(jshint.reporter('default'))
-    .pipe(concat('bundle.js'))
-    .pipe(rename({ suffix: '.min' }))
-    .pipe(uglify())
+//    .pipe(concat('bundle.js'))
+//    .pipe(rename({ suffix: '.min' }))
+//    .pipe(uglify())
     .pipe(gulp.dest('public/js'))
 });
 
-// lib
-gulp.task('lib', function() {
-    gulp.src('node_modules/bootstrap/dist/**')
-        .pipe(gulp.dest('public/lib/bootstrap/'))
-
-    gulp.src('node_modules/chart.js/Chart.min.js')
-        .pipe(gulp.dest('public/lib/chart.js/'))
-
-    gulp.src('node_modules/jquery/dist/jquery.min.js')
-        .pipe(gulp.dest('public/lib/jquery/'))
-
-    gulp.src('node_modules/vue/dist/vue.min.js')
-        .pipe(gulp.dest('public/lib/vue/'))
+// images (not in the default - takes too damn long)
+gulp.task('img', function() {
+  return gulp.src('img/**/*')
+    .pipe(imagemin({ optimizationLevel: 3, progressive: true, interlaced: true }))
+    .pipe(gulp.dest('public/img'))
 });
-
 
 // clean
 gulp.task('clean', function(cb) {
-    del(['public/css/*/**', 'public/js/*/**', 'public/lib/*/**'], cb)
+    del(['public'], cb)
 });
 
 
 // default
 gulp.task('default', function() {
-  gulp.start('html', 'sass');
+  gulp.start('html', 'sass', 'css', 'js', 'img');
 });
 
 
