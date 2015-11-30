@@ -18,29 +18,24 @@ var gulp = require('gulp'),
     del = require('del'),
     htmlreplace = require('gulp-html-replace');
 
+
+// sass
 gulp.task('sass', function () {
-  return sass('sass/*.scss')
-    .on('error', sass.logError)
-    .pipe(gulp.dest('css'));
+  gulp.src('./sass/**/*.scss')
+    .pipe(sass().on('error', sass.logError))
+    .pipe(gulp.dest('./public/css'));
 });
 
 // html
 gulp.task('html', function() {
-  gulp.src('index.html')
+  gulp.src('./*.html')
     .pipe(htmlreplace({
-        'css':['css/materialize.min.css', 'css/portfolio.min.css'],
+        'css':['css/materialize.css', 'css/portfolio.css'],
         'js': ['js/jquery-2.1.1.js', 'js/materialize.min.js', 'js/portfolio.js']
     }))
     .pipe(gulp.dest('public/'));
 });
 
-// css
-gulp.task('css', function() {
-  return gulp.src('css/*.css')
-    .pipe(rename({ suffix: '.min' }))
-//    .pipe(minifycss())
-    .pipe(gulp.dest('public/css/'))
-});
 
 // js
 gulp.task('js', function() {
@@ -66,28 +61,31 @@ gulp.task('clean', function(cb) {
 
 // default
 gulp.task('default', function() {
-  gulp.start('html', 'sass', 'css', 'js', 'img');
+  gulp.start('html', 'sass', 'js', 'img');
 });
 
 
 
 
-// // Watch
-// gulp.task('watch', function() {
-//
-//   // Watch .css files
-//   //gulp.watch('src/css/**/*.css', ['styles']);
-//
-//   // Watch .js files
-//   gulp.watch('src/js/**/*.js', ['scripts']);
-//
-//   // Watch image files
-//   gulp.watch('src/img/**/*', ['images']);
-//
-//   // Create LiveReload server
-//   livereload.listen();
-//
-//   // Watch any files in dist/, reload on change
-//   gulp.watch(['dist/**']).on('change', livereload.changed);
-//
-// });
+// Watch
+gulp.task('watch', function() {
+
+    // Watch image files
+    gulp.watch('./*.html', ['html']);
+
+    //Watch .sass files
+    gulp.watch('sass/**/*.scss', ['sass']);
+
+    // Watch .js files
+    gulp.watch('js/**/*.js', ['js']);
+
+    // Watch image files
+    gulp.watch('img/**/*', ['img']);
+
+    // Create LiveReload server
+    livereload.listen();
+
+    // Watch any files in public/, reload on change
+    gulp.watch(['public/**']).on('change', livereload.changed);
+
+});
