@@ -1,4 +1,4 @@
-$font-stack:    Helvetica, sans-serif;
+$font-stack:    Roboto, sans-serif;
 
 $primary-color: #333;
 
@@ -19,6 +19,46 @@ $color-light-yellow: #FAEDB7;
 
 
 body {
-  font: 100% $font-stack;
-  color: $primary-color;
+    font: 100% $font-stack;
+    color: $primary-color;
+}
+
+
+#work {
+    background-color: #4A0940;
+}
+
+#work > .row .col {
+    padding: 0;
+    margin: 0;
+}
+
+#work > .row-image {
+    font-size: 0;
+}
+#work .card {
+    padding: 0;
+    margin: 0;
+}
+
+#work .card-reveal {
+   background-color: rgba(255, 255, 255, 0.9);
+}
+
+
+#work h1 {
+    color: #FFF;
+    font-size: 3.2em;
+    padding: 1.5em 0em;
+}
+
+/* -----------media queries --------------------------- */
+@media screen and (min-width: 601px) {
+   #work > .row .col {
+        padding: 8px;
+   }
+
+   #work > .row {
+        padding: 8px;
+   }
 }
