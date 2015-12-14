@@ -1,6 +1,7 @@
-$font-stack:    roboto, sans-serif;
+$font-stack:    Roboto, sans-serif;
 
-$primary-color: #333;
+$primary-color: #000;
+$secundary-color: #fff;
 
 $color-green: #16A085;
 $color-light-green: #B9E2DA;
@@ -23,4 +24,23 @@ $color-green-dark: #09454A;
 body {
   font: 100% $font-stack;
   color: $primary-color;
+}
+
+h1, h2{
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.content h1{
+  font-size: 1.5em;
+  text-align: center;
+}
+.content h2{
+  font-size: 1.3em;
+}
+
+#skills {
+  padding: 30px 10px 20px 10px;
+  //background-color: $color-violet-dark;
+  //color: $secundary-color;
 }
