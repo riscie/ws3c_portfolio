@@ -24,8 +24,8 @@ $color-green-dark: #09454A;
 
 // Base html styles
 body {
-  font: 100% $font-stack;
-  color: $primary-color;
+    font: 100% $font-stack;
+    color: $primary-color;
 }
 
 h1, h2 ,h3 {
@@ -294,4 +294,54 @@ header {
       }
     }
   }
+}
+
+// work
+#work {
+  background-color: $color-violet-dark;
+}
+
+#work > .row .col {
+    padding: 0;
+    margin: 0;
+}
+
+#work > .row-image {
+    font-size: 0;
+}
+
+#work .card {
+    padding: 0;
+    margin: 0;
+    opacity: 0;
+}
+
+#work .card-title {
+    font-size: 2.2em;
+}
+
+#work .project-details {
+    font-size: 2em;
+}
+
+#work .card-reveal {
+   background-color: rgba(255, 255, 255, 0.9);
+}
+
+
+#work h1 {
+    color: #FFF;
+    font-size: 3.2em;
+    padding: 1.5em 0em;
+}
+
+/* -----------media queries --------------------------- */
+@media screen and (min-width: 601px) {
+   #work > .row .col {
+        padding: 8px;
+   }
+
+   #work > .row {
+        padding: 8px;
+   }
 }
