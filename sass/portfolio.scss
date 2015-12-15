@@ -1,4 +1,6 @@
-$font-stack:    Helvetica, sans-serif;
+@import "materialize";
+
+$font-stack:    Roboto, sans-serif;
 
 $primary-color: #333;
 
@@ -20,7 +22,98 @@ $color-violet-dark: #4A0940;
 $color-blue-dark: #092A4A;
 $color-green-dark: #09454A;
 
+// Base html styles
 body {
   font: 100% $font-stack;
   color: $primary-color;
+}
+
+// Header
+header {
+  margin: 0;
+  padding: 0;
+  position: relative;
+    
+  @media #{$medium-and-up} {
+    a.button-collapse { display: none; }
+  }
+  
+  .cover {
+    background-image: url('../img/Header.png');
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    padding-top: 51.87500000000001%; /* 747 / 1440 */
+  }
+  
+  nav {
+    top: 0;
+    height: 30px;
+    line-height: 30px;
+    @include gradient(transparent, rgba(0,0,0,0.85), transparent);
+    box-shadow: none;
+    position: absolute;
+    
+    a {
+      font-weight: 300;
+    }
+    
+    .button-collapse {
+      height: 30px;
+      line-height: 30px;
+      
+      i {
+        margin-right: 5px;
+        height: 30px;
+        line-height :30px;
+        font-size: 2.0rem;
+      }
+    }
+    
+    @media #{$large-and-up} {
+      height: 56px;
+      line-height: 56px;
+      font-size: 2.7rem;
+    }
+  }
+  
+  h1 {
+    margin: 0;
+    padding: 0;
+    left: 5%;
+    bottom: 10%;
+    color: #FFFFFF;
+    font-size: 2.4rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    position: absolute;
+    
+    @media #{$medium-and-up} {
+      font-size: 3.2rem;
+      left: 10%;
+      bottom: 25%;
+    }
+    
+    @media #{$large-and-up} {
+      font-size: 4.0rem;
+      left: 15%;
+      bottom: 30%;
+    }
+    
+    span {
+      font-weight: 300;
+      line-height: 15px;
+      font-size: 1.500rem;
+      display: block;
+      
+      @media #{$medium-and-up} {
+        line-height: 20px;
+        font-size: 2.0rem;
+      }
+      
+      @media #{$large-and-up} {
+        line-height: 25px;
+        font-size: 2.5rem;
+      }
+    }
+  }
 }
