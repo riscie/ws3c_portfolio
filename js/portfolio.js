@@ -1,6 +1,8 @@
 (function($){
   $(function(){
 
+    scrollTo();
+    
     $('.button-collapse').sideNav({
       edge: 'right'      
     });
@@ -22,8 +24,8 @@
       },
         offset: '90%'
     });
-
-  }); // end of document ready
+    
+  });
   
   // counter function for skill bars
   function countUp(element) {
@@ -36,12 +38,14 @@
             $(element).find('span').html(Math.ceil(now) + "%");
         }
     });
-  } // end of function countUp
+  }
   
-})(jQuery); // end of jQuery name space
+  // Function for main menu. Scrolls to specific position
+  function scrollTo() {
+    $('nav a[href^=#]').on('click', function (e) { var href = $(this).attr('href'); if($(href).length) { $('html, body').animate({ scrollTop: $(href).offset().top -20 }, 'slow'); } e.preventDefault(); });
+  }
+  
+})(jQuery);
 
-
-var options = [
-   {selector: '.card', offset: 0, callback: 'Materialize.fadeInImage(".card")' }
- ];
- //Materialize.scrollFire(options);
+//var options = [{ selector: '.card', offset: 0, callback: 'Materialize.fadeInImage(".card")' }];
+//Materialize.scrollFire(options);
