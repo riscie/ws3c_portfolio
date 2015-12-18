@@ -104,6 +104,7 @@ p {
 .animated {
   opacity: 0;
 }
+
 section {
   padding: 70px 0 150px;
 }
@@ -236,6 +237,8 @@ header {
       left: 0;
       height: 21px;
       position: absolute;
+      transition: width 1.5s;
+      transition-timing-function: cubic-bezier(.29,.12,.15,1);
       
       .barFlag {
         margin: 0;
