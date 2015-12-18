@@ -1,4 +1,6 @@
 @import "materialize";
+@import "animate";
+
 
 $font-stack:    Roboto, sans-serif;
 
@@ -99,6 +101,9 @@ p {
   background-color: $color-light-yellow;
 }
 
+.animated {
+  opacity: 0;
+}
 section {
   padding: 70px 0 150px;
 }

@@ -13,7 +13,7 @@
     <header>
       <div class="cover"></div>
       <nav>
-        <ul class="right hide-on-small-only">
+        <ul class="right hide-on-small-only animated fadeInDown">
           <li>
             <a href="#skills" title="Meine Fähigkeiten">Meine Fähigkeiten</a>
           </li>
@@ -41,9 +41,9 @@
             <a href="#contact" title="Kontakt">Kontakt</a>
           </li>
         </ul>
-        <a href="#" data-activates="slide-out" class="right button-collapse"><i class="mdi-navigation-menu"></i></a>
+        <a href="#" data-activates="slide-out" class="right button-collapse animated fadeInDown"><i class="mdi-navigation-menu"></i></a>
       </nav>
-      <h1><span>Portfolio von</span> Bettina Burri</h1>
+      <h1 class="animated fadeInUp"><span>Portfolio von</span> Bettina Burri</h1>
     </header>
     <div id="content">
       <section id="skills">
@@ -174,10 +174,10 @@
       <section id="aboutMe">
         <div class="row">
           <div class="col s12 m12 center-align"><h1>Über mich</h1></div>
-          <div class="col s12 m4 center-align">
+          <div class="col s12 m4 center-align animated" data-animation="fadeInLeft">
             <img class="imgAboutMe" src="img/aboutMe_BettinaBurri.jpg" alt="Bettina Burri"/>        
           </div>
-          <div class="col s12 m7 justify-align">
+          <div class="col s12 m7 justify-align animated" data-animation="fadeInRight">
             <h2>Bettina Burri</h2>
             <p>
               Kreative zukünftige Informatikerin mit Abschluss voraussichtlich Ende 2017 mit angewandten Kenntnissen im Requirements und Usability Engineering auf der Suche nach einer interessanten Aufgabe im Usability Engineering und User Experience Design Umfeld während meines Studiums, mit der Möglichkeit eine Karriere in einem innovativen und internationalen Entwicklerteam aufzubauen.
@@ -187,59 +187,71 @@
         </div>
         <div class="row">
           <div class="col s12 m6 l6">
-            <h3>HTML / CSS</h3>
-            <div class="barContainer bgGreenLight">
-              <div class="barPercentage bgGreen" style="width: 90%">
-                <div class="barFlag bgGreen">
-                  <div class="arrow"></div>
-                  90%
+            <div class="animated" data-animation="fadeInLeft">
+              <h3>HTML / CSS</h3>
+              <div class="barContainer bgGreenLight">
+                <div class="barPercentage bgGreen" style="width: 90%">
+                  <div class="barFlag bgGreen">
+                    <div class="arrow"></div>
+                    90%
+                  </div>
                 </div>
               </div>
             </div>
-            <h3>JavaScript</h3>
-            <div class="barContainer bgBlueLight">
-              <div class="barPercentage bgBlue" style="width: 80%">
-                <div class="barFlag bgBlue">
-                  <div class="arrow"></div>
-                  80%
+            <div class="animated" data-animation="fadeInLeft">
+              <h3>JavaScript</h3>
+              <div class="barContainer bgBlueLight">
+                <div class="barPercentage bgBlue" style="width: 80%">
+                  <div class="barFlag bgBlue">
+                    <div class="arrow"></div>
+                    80%
+                  </div>
                 </div>
               </div>
-            </div>
-            <h3>PHP</h3>
-            <div class="barContainer bgOrangeLight">
-              <div class="barPercentage bgOrange" style="width: 95%">
-                <div class="barFlag bgOrange">
-                  <div class="arrow"></div>
-                  95%
+            </div>            
+            <div class="animated" data-animation="fadeInLeft">
+              <h3>PHP</h3>
+              <div class="barContainer bgOrangeLight">
+                <div class="barPercentage bgOrange" style="width: 95%">
+                  <div class="barFlag bgOrange">
+                    <div class="arrow"></div>
+                    95%
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="col s12 m6 l6">            
-            <h3>Java</h3>
-            <div class="barContainer bgVioletLight">
-              <div class="barPercentage bgViolet" style="width: 95%">
-                <div class="barFlag bgViolet">
-                  <div class="arrow"></div>
-                  95%
-                </div>
-              </div>
-            </div>            
-            <h3>Office Produkte</h3>
-            <div class="barContainer bgRedLight">
-              <div class="barPercentage bgRed" style="width: 95%">
-                <div class="barFlag bgRed">
-                  <div class="arrow"></div>
-                  95%
+          <div class="col s12 m6 l6">
+            <div class="animated" data-animation="fadeInRight">
+              <h3>Java</h3>
+              <div class="barContainer bgVioletLight">
+                <div class="barPercentage bgViolet" style="width: 95%">
+                  <div class="barFlag bgViolet">
+                    <div class="arrow"></div>
+                    95%
+                  </div>
                 </div>
               </div>
             </div>
-            <h3>Adobe Produkte</h3>
-            <div class="barContainer bgYellowLight">
-              <div class="barPercentage bgYellow" style="width: 90%">
-                <div class="barFlag bgYellow">
-                  <div class="arrow"></div>
-                  90%
+            <div class="animated" data-animation="fadeInRight">        
+              <h3>Office Produkte</h3>
+              <div class="barContainer bgRedLight">
+                <div class="barPercentage bgRed" style="width: 95%">
+                  <div class="barFlag bgRed">
+                    <div class="arrow"></div>
+                    95%
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="animated" data-animation="fadeInRight">        
+              <h3>Adobe Produkte</h3>
+              <div class="barContainer bgYellowLight">
+                <div class="barPercentage bgYellow" style="width: 90%">
+                  <div class="barFlag bgYellow">
+                    <div class="arrow"></div>
+                    90%
+                  </div>
                 </div>
               </div>
             </div>
@@ -276,6 +288,7 @@
     <!-- build:js -->
     <script type="text/javascript" src="js/jquery-2.1.1.js"></script>
     <script type="text/javascript" src="js/materialize.js"></script>
+    <script type="text/javascript" src="js/jquery.waypoints.js"></script>
     <script type="text/javascript" src="js/portfolio.js"></script>
     <!-- endbuild -->
     </div>

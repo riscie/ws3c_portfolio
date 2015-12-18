@@ -30,8 +30,8 @@ gulp.task('sass', function () {
 gulp.task('html', function() {
   gulp.src('./*.html')
     .pipe(htmlreplace({
-        'css':['css/materialize.css', 'css/portfolio.css'],
-        'js': ['js/jquery-2.1.1.js', 'js/materialize.min.js', 'js/portfolio.js']
+        'css':['css/portfolio.css'],
+        'js': ['js/jquery-2.1.1.js', 'js/materialize.min.js', 'js/jquery.waypoints.js', 'js/portfolio.js']
     }))
     .pipe(gulp.dest('public/'));
 });
