@@ -28,6 +28,7 @@ $color-green-dark: #09454A;
 body {
     font: 100% $font-stack;
     color: $primary-color;
+    overflow-x: hidden;
 }
 
 h1, h2 ,h3 {
@@ -235,10 +236,12 @@ header {
       padding: 0;
       top: 0;
       left: 0;
+      width: 0px;
       height: 21px;
       position: absolute;
-      transition: width 1.5s;
-      transition-timing-function: cubic-bezier(.29,.12,.15,1);
+      @include transition-duration(1.5s);
+      @include transition-property(width);
+      @include transition-timing-function(cubic-bezier(.29,.12,.15,1));
       
       .barFlag {
         margin: 0;
