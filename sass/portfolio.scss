@@ -1,10 +1,12 @@
+
 @import "materialize";
 @import "animate";
 
 
 $font-stack:    Roboto, sans-serif;
 
-$primary-color: #333;
+$primary-color: #000;
+$secundary-color: #fff;
 
 $color-green: #16A085;
 $color-light-green: #B9E2DA;
@@ -44,14 +46,24 @@ h2 {
   font-size: 1.600em;
 }
 
+.content h1{
+  font-size: 1.5em;
+  text-align: center;
+}
+
+.content h2{
+  font-size: 1.3em;
+}
+
 h3 {
   font-size: 1.067em;
 }
 
 p {
   font-size: 1.067rem;
-  font-weight: 300;
+  font-weight: 200;
   line-height: 1.5;
+  text-align: justify;
 }
 
 .bgGreen {
@@ -125,18 +137,18 @@ header {
   margin: 0;
   padding: 0;
   position: relative;
-    
+
   @media #{$medium-and-up} {
     a.button-collapse { display: none; }
   }
-  
+
   .cover {
     background-image: url('../img/Header.png');
     background-repeat: no-repeat;
     background-size: 100% auto;
     padding-top: 51.87500000000001%; /* 747 / 1440 */
   }
-  
+
   nav {
     top: 0;
     height: 30px;
@@ -144,15 +156,15 @@ header {
     @include gradient(transparent, rgba(0,0,0,0.85), transparent);
     box-shadow: none;
     position: absolute;
-    
+
     a {
       font-weight: 300;
     }
-    
+
     .button-collapse {
       height: 30px;
       line-height: 30px;
-      
+
       i {
         margin-right: 5px;
         height: 30px;
@@ -160,14 +172,14 @@ header {
         font-size: 2.0rem;
       }
     }
-    
+
     @media #{$large-and-up} {
       height: 56px;
       line-height: 56px;
       font-size: 2.7rem;
     }
   }
-  
+
   h1 {
     margin: 0;
     padding: 0;
@@ -177,30 +189,30 @@ header {
     font-size: 2.4rem;
     font-weight: 700;
     position: absolute;
-    
+
     @media #{$medium-and-up} {
       font-size: 3.2rem;
       left: 10%;
       bottom: 25%;
     }
-    
+
     @media #{$large-and-up} {
       font-size: 4.0rem;
       left: 15%;
       bottom: 30%;
     }
-    
+
     span {
       font-weight: 300;
       line-height: 15px;
       font-size: 1.500rem;
       display: block;
-      
+
       @media #{$medium-and-up} {
         line-height: 20px;
         font-size: 2.0rem;
       }
-      
+
       @media #{$large-and-up} {
         line-height: 25px;
         font-size: 2.5rem;
@@ -211,26 +223,26 @@ header {
 
 // about me
 #aboutMe {
-  
+
   .imgAboutMe {
     margin: 0;
     padding: 0;
     width: 100%;
     max-width: 205px;
   }
-  
+
   h3 {
     margin: 50px 0 10px;
     font-weight: 700;
   }
-  
+
   .barContainer {
     margin: 0;
     padding: 0;
     width: 100%;
     height: 21px;
     position: relative;
-    
+
     .barPercentage {
       margin: 0;
       padding: 0;
@@ -242,7 +254,7 @@ header {
       @include transition-duration(1.5s);
       @include transition-property(width);
       @include transition-timing-function(cubic-bezier(.29,.12,.15,1));
-      
+
       .barFlag {
         margin: 0;
         padding: 4px 0;
@@ -253,7 +265,7 @@ header {
         font-size: 0.733em;
         text-align: center;
         position: absolute;
-        
+
         .arrow {
           margin: 0;
           padding: 0;
@@ -267,37 +279,37 @@ header {
           position: absolute;
         }
       }
-      
+
       .barFlag.bgGreen {
         .arrow {
           border-top-color: $color-green;
         }
       }
-      
+
       .barFlag.bgBlue {
         .arrow {
           border-top-color: $color-blue;
         }
       }
-      
+
       .barFlag.bgOrange {
         .arrow {
           border-top-color: $color-orange;
         }
       }
-      
+
       .barFlag.bgViolet {
         .arrow {
           border-top-color: $color-violet;
         }
       }
-      
+
       .barFlag.bgRed {
         .arrow {
           border-top-color: $color-red;
         }
       }
-      
+
       .barFlag.bgYellow {
         .arrow {
           border-top-color: $color-yellow;
@@ -344,6 +356,25 @@ header {
     color: #FFF;
 }
 
+// skills
+#skills .skill-icon{
+  margin: 1.2rem 0 1.1rem 0;
+}
+.color-green{
+  color: $color-green;
+}
+.color-violet{
+  color: $color-violet;
+}
+.color-blue{
+  color: $color-blue;
+}
+
+
+
+
+
+
 /* -----------media queries --------------------------- */
 @media screen and (min-width: 601px) {
    #work > .row .col {
@@ -353,4 +384,12 @@ header {
    #work > .row {
         padding: 8px;
    }
+   #skills .row .col{
+     text-align: center;
+   }
+
+   #skills .skill-icon{
+     margin: 1.2rem 1.1rem 0 1.1rem;
+    font-size: 4em;
+  }
 }

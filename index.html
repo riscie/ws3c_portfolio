@@ -6,10 +6,13 @@
     <title>Bettina Burri - Portfolio</title>
     <link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/icon?family=Material+Icons">
     <!-- build:css -->
-    <link type="text/css" rel="stylesheet" href="css/portfolio.min.css" />
+    <link type="text/css" rel="stylesheet" href="css/materialize.css" />
+    <link type="text/css" rel="stylesheet" href="css/portfolio.css" />
     <!-- endbuild -->
   </head>
   <body>
+
+    <div class="content">
     <header>
       <div class="cover"></div>
       <nav>
@@ -45,27 +48,65 @@
       </nav>
       <h1 class="animated fadeInUp"><span>Portfolio von</span> Bettina Burri</h1>
     </header>
-    <div id="content">
+
       <section id="skills">
         <h1>Meine Fähigkeiten</h1>
-        <div>
-          <h2>Programmierung</h2>
-          <p>
-            Von  HTML bis Java über JavaScript und PHP reichen meine Erfahrungen. HTML/CSS setze ich schon seit Jahren auch Beruflich ein. PHP, Java und JavaScript sind durch das Studium dazugekommen.
-          </p>
+        <div class="row">
+
+          <div class="col s12 m4">
+            <div class="col s2 m12">
+              <span class="fa-stack fa-lg skill-icon color-green">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-code fa-stack-1x fa-inverse"></i>
+              </span>
+            </div>
+            <div class="col s10 m12">
+            <h2>Programmierung</h2>
+            </div>
+
+            <div class="col s12">
+            <p>
+              Von  HTML über JavaScript und PHP bis Java reichen meine kenntnisse in der Programmierung. HTML/CSS setze ich schon seit Jahren auch Beruflich ein. PHP, Java und JavaScript erlernte ich im Studium durch Projektarbeiten und praktische Anwendung.
+            </p>
+          </div>
+          </div>
+
+
+        <div class="col s12  m4">
+          <div class="col s2 m12">
+            <span class="fa-stack fa-lg skill-icon color-violet">
+              <i class="fa fa-circle fa-stack-2x"></i>
+              <i class="fa fa-pencil fa-stack-1x fa-inverse"></i>
+            </span>
+          </div>
+            <div class="col s10 m12">
+              <h2>Design</h2>
+            </div>
+
+            <div class="col s12">
+              <p>
+                Als gelernte Bildhauerin ist mir Design wichtig. Ich gestalte gerne und viel. Ich verfüge über mehrere Jahre Erfahrung im Web- und im UI-Design. Gerne würde ich diese Fähigkeiten auch vermehrt im Beruf einsetzen dürfen.
+              </p>
+            </div>
         </div>
-        <div>
-          <h2>Design</h2>
-          <p>
-            Als ehemalige Bildhauerin ist mir Design wichtig. Ich gestalte gerne und gut. Schon etliche Jahre. Seit einigen Jahren ist nun auch das UI Design dazugekommen.
-          </p>
-        </div>
-        <div>
+        <div class="col s12 m4">
+          <div class="col s2 m12">
+            <span class="fa-stack fa-lg skill-icon color-blue">
+              <i class="fa fa-circle fa-stack-2x"></i>
+              <i class="fa fa-camera fa-stack-1x fa-inverse"></i>
+            </span>
+          </div>
+        <div class="col s10 m12">
           <h2>Video / Fotografie</h2>
-          <p>
-            Fotografie ist ein kleines Hobby von mir und seit ein einigen Jahren erstelle ich auch beruflich Semi-Professionelle Videos für den Internen Gebrauch.
-          </p>
         </div>
+        <div class="col s12">
+          <p>
+            Ich kann zwei Jahre Berufserfahrung in der Film Postproduktion vorweisen in der ich diverse Semi-Professionelle Videos für den Internen Gebrauch erstellt habe, nebenher habe ich auch schon mehrere kleinere Fotoaufträge übernommen.
+          </p>
+          <div>
+          </div>
+        </div>
+      </div>
       </section>
       <section id="work">
       <div class="row">
@@ -175,7 +216,7 @@
         <div class="row">
           <div class="col s12 m12 center-align"><h1>Über mich</h1></div>
           <div class="col s12 m4 center-align animated" data-animation="fadeInLeft">
-            <img class="imgAboutMe" src="img/aboutMe_BettinaBurri.jpg" alt="Bettina Burri"/>        
+            <img class="imgAboutMe" src="img/aboutMe_BettinaBurri.jpg" alt="Bettina Burri"/>
           </div>
           <div class="col s12 m7 justify-align animated" data-animation="fadeInRight">
             <h2>Bettina Burri</h2>
@@ -208,7 +249,7 @@
                   </div>
                 </div>
               </div>
-            </div>            
+            </div>
             <div>
               <h3>PHP</h3>
               <div class="barContainer bgOrangeLight">
@@ -233,7 +274,7 @@
                 </div>
               </div>
             </div>
-            <div>        
+            <div>
               <h3>Office Produkte</h3>
               <div class="barContainer bgRedLight">
                 <div class="barPercentage bgRed" data-width="95">
@@ -244,7 +285,7 @@
                 </div>
               </div>
             </div>
-            <div>        
+            <div>
               <h3>Adobe Produkte</h3>
               <div class="barContainer bgYellowLight">
                 <div class="barPercentage bgYellow" data-width="90">
@@ -285,9 +326,10 @@
         <a href="http://plus.google.com/+BettinaBurri_BBU" target="_blank">Google+</a>
       </div>
     </footer>
+  </div>
     <!-- build:js -->
     <script type="text/javascript" src="js/jquery-2.1.1.js"></script>
-    <script type="text/javascript" src="js/materialize.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
     <script type="text/javascript" src="js/jquery.waypoints.js"></script>
     <script type="text/javascript" src="js/portfolio.js"></script>
     <!-- endbuild -->
