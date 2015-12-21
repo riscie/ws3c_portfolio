@@ -43,10 +43,6 @@ p{
   font-size: 1.3em;
 }
 
-.text-center{
-  text-align: center;
-}
-
 #skills {
   padding: 30px 10px 20px 10px;
 }
@@ -61,4 +57,16 @@ p{
 }
 .color-blue{
   color: $color-blue;
+}
+
+
+@media screen and (min-width: 601px) {
+   #skills .row .col{
+     text-align: center;
+   }
+
+   #skills .skill-icon{
+     margin: 1.2rem 1.1rem 0 1.1rem;
+    font-size: 4em;
+   }
 }
