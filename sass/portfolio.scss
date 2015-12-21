@@ -24,13 +24,17 @@ $color-green-dark: #09454A;
 body {
   font: 100% $font-stack;
   color: $primary-color;
+  font-weight: 200;
+  line-height: 150%;
 }
 
 h1, h2{
   text-transform: uppercase;
   font-weight: 500;
 }
-
+p{
+  text-align: justify;
+}
 .content h1{
   font-size: 1.5em;
   text-align: center;
@@ -39,6 +43,22 @@ h1, h2{
   font-size: 1.3em;
 }
 
+.text-center{
+  text-align: center;
+}
+
 #skills {
   padding: 30px 10px 20px 10px;
+}
+#skills .skill-icon{
+  margin: 1.2rem 0 1.1rem 0;
+}
+.color-green{
+  color: $color-green;
+}
+.color-violet{
+  color: $color-violet;
+}
+.color-blue{
+  color: $color-blue;
 }
