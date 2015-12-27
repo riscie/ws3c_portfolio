@@ -49,7 +49,7 @@ gulp.task('js', function() {
 // images (not in the default - takes too damn long)
 gulp.task('img', function() {
   return gulp.src('img/**/*')
-    .pipe(imagemin({ optimizationLevel: 3, progressive: true, interlaced: true }))
+    .pipe(cache(imagemin({ optimizationLevel: 7, progressive: true, interlaced: true })))
     .pipe(gulp.dest('public/img'))
 });
 
