@@ -1,6 +1,5 @@
 (function($){
-  $(function(){
-
+  $(function() {
     scrollTo();
     
     $('.button-collapse').sideNav({
@@ -46,6 +45,3 @@
   }
   
 })(jQuery);
-
-//var options = [{ selector: '.card', offset: 0, callback: 'Materialize.fadeInImage(".card")' }];
-//Materialize.scrollFire(options);

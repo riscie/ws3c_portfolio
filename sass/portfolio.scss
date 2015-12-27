@@ -335,8 +335,12 @@ header {
 #work .card {
     padding: 0;
     margin: 0;
+}
+
+.light-pollution, .my-task, .the-fridge, .elearning, .bite-or-swipe, .ui-pattern {
     opacity: 0;
 }
+
 
 #work .card-title {
     font-size: 2.2em;
