@@ -3,7 +3,7 @@
 @import "animate";
 
 
-$font-stack:    Roboto, sans-serif;
+$font-stack: Roboto, sans-serif;
 
 $primary-color: #000;
 $secundary-color: #fff;
@@ -28,7 +28,7 @@ $color-green-dark: #09454A;
 
 // Base html styles
 body {
-    font: 100% $font-stack;
+    font: 16px $font-stack;
     color: $primary-color;
     overflow-x: hidden;
 }
@@ -333,6 +333,17 @@ header {
     box-shadow: none;
   }
   
+  .card {
+    margin-bottom: 20px;
+  }
+  
+  @media #{$medium-and-up} {
+    .card {
+      margin-bottom: 0;
+    }
+  }
+  
+  
   .card-reveal {
     background-color: rgba(255, 255, 255, 0.9);    
   }
@@ -342,20 +353,18 @@ header {
 #skills .skill-icon{
   margin: 1.2rem 0 1.1rem 0;
 }
+
 .color-green{
   color: $color-green;
 }
+
 .color-violet{
   color: $color-violet;
 }
+
 .color-blue{
   color: $color-blue;
 }
-
-
-
-
-
 
 /* -----------media queries --------------------------- */
 @media screen and (min-width: 601px) {
@@ -373,5 +382,63 @@ header {
    #skills .skill-icon{
      margin: 1.2rem 1.1rem 0 1.1rem;
     font-size: 4em;
+  }
+}
+
+// footer
+
+footer {
+  background-color: $color-blue-dark;
+  color: #FFFFFF;
+  
+  .row {
+    margin-bottom: 0;
+    
+    h3 {
+      margin-top: 30px;
+      font-size: 1.500em;
+      font-weight: 500;
+    }
+    
+    @media #{$medium-and-up} {
+      h3 {
+        margin-top: 48px;
+      }
+      
+      p, h3.address {
+        text-align: right;
+      }
+    }
+    
+    ul li, p {
+      margin-bottom: 0;
+      font-size: 1.125em;
+      line-height: 32px;
+      font-weight: 300;
+    }
+    
+    @media #{$large-and-up} {
+      ul, p {
+        margin-bottom: 50px;
+      }
+      
+      p, h3.address {
+        text-align: left;
+      }
+      
+      .social {
+        text-align: right;
+      }
+    }
+    
+    a {
+      margin: 38px 0 40px;
+      color: #FFFFFF;
+      display: inline-block;
+      
+      .fa-xing, .fa-linkedin, .fa-google-plus {
+        color: $color-blue-dark;
+      }
+    }
   }
 }
