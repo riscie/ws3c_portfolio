@@ -439,3 +439,36 @@ footer {
     }
   }
 }
+
+// contact
+#contact {
+  
+  background-color: $color-green-dark;
+  
+  h1 {
+    color: #FFFFFF;
+  }
+  
+  .input-field label {
+    color: #FFFFFF;
+  }
+  
+  input, textarea {
+    color: #FFFFFF;
+    border-bottom-color: #FFFFFF;
+  }
+  
+  input.invalid, textarea.invalid {
+    border-bottom: 1px solid #F44336;
+    color: #F44336;
+  }
+  
+  textarea
+  {
+    min-height: 214px;
+    
+    @media #{$large-and-up} {
+      min-height: 216px;
+    }
+  }
+}
