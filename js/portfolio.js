@@ -41,7 +41,7 @@
   
   // Function for main menu. Scrolls to specific position
   function scrollTo() {
-    $('nav a[href^=#]').on('click', function (e) { var href = $(this).attr('href'); if($(href).length) { $('html, body').animate({ scrollTop: $(href).offset().top -20 }, 'slow'); } e.preventDefault(); });
+    $('nav a[href^=#]').on('click', function (e) { var href = $(this).attr('href'); if($(href).length) { $('html, body').animate({ scrollTop: $(href).offset().top }, 'slow'); } e.preventDefault(); });
   }
   
 })(jQuery);
