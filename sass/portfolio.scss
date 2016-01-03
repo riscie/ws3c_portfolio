@@ -20,12 +20,46 @@ $color-violet-dark: #4A0940;
 $color-blue-dark: #092A4A;
 $color-green-dark: #09454A;
 
+// Base html styles
 body {
-  font: 100% $font-stack;
-  color: $primary-color;
+    font: 100% $font-stack;
+    color: $primary-color;
+    overflow-x: hidden;
+}
+
+h1, h2 ,h3 {
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+h1 {
+  font-size: 2.000rem;
+}
+
+h2 {
+  font-size: 1.600em;
 }
 
 #contact {
   background-color: $color-green-dark;
   min-height: 200px;
+  color: #fff;
+}
+
+
+section {
+  padding: 10px 0 20px;
+
+}
+
+.row {
+  padding: 0 10px;
+  width: 100%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#contact h1 {
+    color: #fff;
 }
