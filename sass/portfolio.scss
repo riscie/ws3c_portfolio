@@ -113,7 +113,7 @@ p {
 
 section {
   padding: 10px 0 20px;
-  
+
   @media #{$medium-and-up} {
     padding: 50px 0 50px;
   }
@@ -319,30 +319,30 @@ header {
 // work
 #work {
   background-color: $color-violet-dark;
-  
+
   h1 {
     color: #FFFFFF;
   }
-  
+
   .card, img {
     margin: 0;
     padding: 0;
     border-radius: 0;
     box-shadow: none;
   }
-  
+
   .card {
     margin-bottom: 20px;
   }
-  
+
   @media #{$medium-and-up} {
     .card {
       margin-bottom: 0;
     }
   }
-  
+
   .card-reveal {
-    background-color: rgba(255, 255, 255, 0.9);    
+    background-color: rgba(255, 255, 255, 0.9);
   }
 }
 
@@ -387,52 +387,52 @@ header {
 footer {
   background-color: $color-blue-dark;
   color: #FFFFFF;
-  
+
   .row {
     margin-bottom: 0;
-    
+
     h3 {
       margin-top: 30px;
       font-size: 1.500em;
       font-weight: 500;
     }
-    
+
     @media #{$medium-and-up} {
       h3 {
         margin-top: 48px;
       }
-      
+
       p, h3.address {
         text-align: right;
       }
     }
-    
+
     ul li, p {
       margin-bottom: 0;
       font-size: 1.125em;
       line-height: 32px;
       font-weight: 300;
     }
-    
+
     @media #{$large-and-up} {
       ul, p {
         margin-bottom: 50px;
       }
-      
+
       p, h3.address {
         text-align: left;
       }
-      
+
       .social {
         text-align: right;
       }
     }
-    
+
     a {
       margin: 38px 0 40px;
       color: #FFFFFF;
       display: inline-block;
-      
+
       .fa-xing, .fa-linkedin, .fa-google-plus {
         color: $color-blue-dark;
       }
@@ -442,33 +442,40 @@ footer {
 
 // contact
 #contact {
-  
+
   background-color: $color-green-dark;
-  
+
   h1 {
     color: #FFFFFF;
   }
-  
+
   .input-field label {
     color: #FFFFFF;
   }
-  
+
   input, textarea {
     color: #FFFFFF;
     border-bottom-color: #FFFFFF;
   }
-  
+
   input.invalid, textarea.invalid {
     border-bottom: 1px solid #F44336;
     color: #F44336;
   }
-  
+
   textarea
   {
     min-height: 214px;
-    
+
     @media #{$large-and-up} {
       min-height: 226px;
     }
+  }
+  .btn-contact{
+    background-color: transparent;
+    border: 1px solid white;
+    box-shadow: none;
+    width: 200px;
+    margin-top: 20px;
   }
 }
