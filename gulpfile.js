@@ -37,6 +37,12 @@ gulp.task('html', function() {
 });
 
 
+// fonts
+gulp.task('fonts', function() {
+  return gulp.src('fonts/**/*')
+    .pipe(gulp.dest('public/fonts'))
+});
+
 // js
 gulp.task('js', function() {
   return gulp.src('js/*.js')
@@ -61,7 +67,7 @@ gulp.task('clean', function(cb) {
 
 // default
 gulp.task('default', function() {
-  gulp.start('html', 'sass', 'js', 'img');
+  gulp.start('html', 'sass', 'js', 'img', 'fonts');
 });
 
 
